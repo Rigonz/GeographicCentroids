@@ -85,3 +85,5 @@ See the two files included in this repository.
 The results are included in the files:
 * "country centroids R0.csv"
 * "region centroids R0.csv"
+
+An example of the differences between geographic and demographic centroids, and the displacement of the demographic centroid in the last 20 years can be seen in the repository: [map](https://github.com/Rigonz/GeographicCentroids/blob/master/pics/GeoCentroids.png).
