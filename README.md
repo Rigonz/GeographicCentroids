@@ -86,10 +86,11 @@ The results are included in the files:
 * "country centroids R0.csv"
 * "region centroids R0.csv"
 
-An example of the differences between geographic and demographic centroids, and the displacement of the demographic centroid in the last 20 years can be seen in the repository: [pics](https://github.com/Rigonz/GeographicCentroids/blob/master/pics/).
-
-## Warning
+**Warning** 
 The geographic centroid of Russia seems to be wrong, all other countries seem good. Will have to look.
 
+An example of the differences between geographic and demographic centroids, and the displacement of the demographic centroid in the last 20 years can be seen in the repository: [pics](https://github.com/Rigonz/GeographicCentroids/blob/master/pics/).
+
 ![countries](/pics/GeoCentroids.png)
+
 ![regions](/pics/RegionCentroids.png)
