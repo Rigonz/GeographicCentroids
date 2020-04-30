@@ -64,11 +64,12 @@ If we want to avoid mixing angle and linear units the conversion is:
     y = a*cos(LAT)*sin(LON)
     z = b*sin(LAT)
 Where a and b are the semiaxis of the selected geoid.
-The centroid will not lay on the surface but within the volume of the geoid. Its reprojection is straightforward from the previous equations:
+The centroid will not lay on the surface but within the volume of the geoid. Its reprojection is straightforward:
 
     LAT = arcsin(Z/b)
-    LON = arcsin (Y/a/cos(LAT))
-Where Y and Z are the averages (weighed if necessary) of the y's and z's from the dataset.
+    LON = atan2(Y, X)
+Where X, Y and Z are the averages (weighed if necessary) of the x's, y's and z's from the dataset.
+(As a side note: this makes the selection of the geoid irrelevant, as both a and b are removed in the calculation of the geographical coordinates).
 
 ## Dataset
 The dataset used in this project is the "Administrative Unit Center Points with Population Estimates" v4.11 from GPW (Gridded Population of the World) at [SEDAC_GPW](https://sedac.ciesin.columbia.edu/data/set/gpw-v4-admin-unit-center-points-population-estimates-rev11).
@@ -85,9 +86,6 @@ See the two files included in this repository.
 The results are included in the files:
 * "country centroids R0.csv"
 * "region centroids R0.csv"
-
-**Warning** 
-The geographic centroid of Russia seems to be wrong, all other countries seem good. Will have to look.
 
 An example of the differences between geographic and demographic centroids, and the displacement of the demographic centroid in the last 20 years can be seen in the repository: [pics](https://github.com/Rigonz/GeographicCentroids/blob/master/pics/).
 
